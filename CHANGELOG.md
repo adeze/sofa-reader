@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `sofa-to-sqlite` binary (moved from `sotf-tools`): converts SOFA HRTF
+  files to SQLite `.hrtfdb` databases using the same schema
+  `SofaFile::load_sqlite` reads. Gated on the `sqlite` feature
+  (enabled by default), so `--no-default-features` builds skip it.
+
 ## [0.2.0] - 2026-09-04
 
 ### Added

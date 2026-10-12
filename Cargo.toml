@@ -14,6 +14,11 @@ deflate = ["dep:flate2"]
 # SQLite `.hrtfdb` cache loading (pulls in rusqlite + bincode).
 sqlite = ["dep:rusqlite", "dep:bincode"]
 
+[[bin]]
+name = "sofa-to-sqlite"
+path = "bin/sofa_to_sqlite.rs"
+required-features = ["sqlite"]
+
 [dependencies]
 thiserror = "2"
 flate2 = { version = "1", optional = true }
@@ -21,11 +26,12 @@ log = "0.4"
 serde = { version = "1", features = ["derive"] }
 rusqlite = { version = "0.38", optional = true }
 bincode = { version = "2.0.1", features = ["serde"], optional = true }
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+env_logger = "0.11"
 
 [dev-dependencies]
 tempfile = "3"
 proptest = "1"
 
-[patch.crates-io]
 # Match GPUI compatibility forks: workspace patches are not inherited.
-rusty-fork = { path = "../sotf-3rdparties/rusty-fork" }

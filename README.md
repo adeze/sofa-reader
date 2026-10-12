@@ -69,6 +69,18 @@ compile-checked doctest, so the examples cannot rot.)
 |----------|---------|----------------------------------------|
 | `deflate`| Yes     | Enables zlib decompression via `flate2`|
 
+## Binaries
+
+### `sofa-to-sqlite`
+
+Convert a SOFA HRTF file to a SQLite `.hrtfdb` database for faster
+loading (same schema `SofaFile::load_sqlite` reads). Requires the
+`sqlite` feature (enabled by default).
+
+```bash
+cargo run --bin sofa-to-sqlite -- input.sofa output.hrtfdb
+```
+
 ## Testing
 
 ```bash

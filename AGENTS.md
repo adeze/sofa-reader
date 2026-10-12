@@ -9,6 +9,11 @@ First-party in-house library. The standard HDF5 library is hard to build portabl
 ## Features
 
 - `deflate` (default) -- Deflate compression support via `flate2`
+- `sqlite` (default) -- `.hrtfdb` cache loading; also gates the `sofa-to-sqlite` binary
+
+## Binaries
+
+- `sofa-to-sqlite` -- Convert SOFA files to SQLite `.hrtfdb` (`cargo run --bin sofa-to-sqlite -- in.sofa out.hrtfdb`)
 
 ## Testing
 

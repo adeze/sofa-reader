@@ -26,6 +26,9 @@ build:
 test:
     cargo test --all-features
 
+ntest:
+    cargo nextest run --release --no-fail-fast --workspace --lib --bins --examples --all-features
+
 # Run tests without default features
 test-minimal:
     cargo test --no-default-features --lib
