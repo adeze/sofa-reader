@@ -1,6 +1,6 @@
 [package]
 name = "sofa-reader"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2024"
 license = "MIT"
 repository = "https://github.com/YOUR_USERNAME/sofa-reader"
@@ -16,7 +16,7 @@ sqlite = ["dep:rusqlite", "dep:bincode"]
 
 [[bin]]
 name = "sofa-to-sqlite"
-path = "bin/sofa_to_sqlite.rs"
+path = "src/bin/sofa_to_sqlite.rs"
 required-features = ["sqlite"]
 
 [dependencies]
